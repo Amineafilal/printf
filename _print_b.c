@@ -19,7 +19,7 @@ int print_b(unsigned int n)
 	{
 		write(1, &binary[i], 1);
 	}
-	if (cont == 0)
+	if (count == 0)
 	{
 		write(1, "0", 1);
 		count++;

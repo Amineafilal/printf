@@ -6,7 +6,7 @@
  */
 int print_b(unsigned int n)
 {
-	unsigned int i, count;
+	int i, count;
 	char binary[32];
 
 	count = 0;

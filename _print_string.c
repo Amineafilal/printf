@@ -6,7 +6,7 @@
  */
 int print_string(char *ptr)
 {
-	int count = 0;
+	int count = 0, i;
 
 	if (ptr == NULL)
 	{
@@ -14,7 +14,7 @@ int print_string(char *ptr)
 		for (i = 0; i < _strlen(ptr); i++)
 		{
 			write(1, &ptr[0], 1);
-			return (ptr);
+			return (_strlen(ptr));
 		}
 	}
 	else

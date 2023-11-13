@@ -1,12 +1,12 @@
-#include "mainprintf.h"
+#include "main.h"
 /**
  * print_b - Write a function convert binary
  * @n: a character string.
  * Return: returns number of binary printed.
  */
-int print_b(int n)
+int print_b(unsigned int n)
 {
-	int i, count;
+	unsigned int i, count;
 	char binary[32];
 
 	count = 0;

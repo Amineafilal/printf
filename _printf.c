@@ -34,6 +34,8 @@ int _printf(const char *format, ...)
 				count += print_char(va_arg(args, int));
 			if (*format == '%')
 				count += write(1, format, 1);
+			if (*format == 'b')
+				count += print_b(va_arg(args, int));
 		}
 		format++;
 	}

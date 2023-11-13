@@ -14,7 +14,7 @@ int _countDigits(int value);
 int print_char(char c);
 int print_i_d(int value);
 int print_string(char *ptr);
-
+int print_b(int n);
 
 
 #endif

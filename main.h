@@ -11,9 +11,9 @@ void print_number(int n);
 int _printf(const char *format, ...);
 int _strlen(char *p);
 int _countDigits(int value);
-int print_char(va_list args);
+int print_char(char c);
 int print_i_d(int value);
-int print_string(va_list args);
+int print_string(char *ptr);
 
 
 

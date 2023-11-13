@@ -8,7 +8,6 @@ int print_b(unsigned int n)
 {
 	int i, count;
 	char binary[32];
-	char c = '0';
 
 	count = 0;
 	while (n > 0)
@@ -22,7 +21,7 @@ int print_b(unsigned int n)
 	}
 	if (cont == 0)
 	{
-		write(1, &c, 1);
+		write(1, "0", 1);
 		count++;
 	}
 	return (count);

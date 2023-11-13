@@ -5,11 +5,16 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <limits.h>
 
-int main(void);
 void print_number(int n);
 int _printf(const char *format, ...);
 int _strlen(char *p);
 int _countDigits(int value);
+int print_char(va_list args);
+int print_i_d(int value);
+int print_string(va_list args);
+
+
 
 #endif

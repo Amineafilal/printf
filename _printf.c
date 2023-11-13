@@ -10,57 +10,36 @@
 
 int _printf(const char *format, ...)
 {
-	int i = 0, length, value;
-	char *ptr;
-	char c;
+	int count = 0;
 	va_list args;
 
 	va_start(args, format);
-	if (format[0] == '%' && format[1] == '\0')
+	if ((format[0] == '%' && format[1] == '\0') || *format == '\0')
 		return (-1);
 	while (*format != '\0')
 	{
 		if (*format != '%')
 		{
 			write(1, format, 1);
-			i++;
+			count++;
 		}
-		else
+		if (*format == '%')
 		{
 			format++;
-			if (*format == '%')
-			{
-				write(1, format, 1);
-				i++;
-			}
-			if (*format == 'c')
-			{
-				c = va_arg(args, int);
-				write(1, &c, 1);
-				i++;
-			}
 			if (*format == 's')
-			{
-				ptr = va_arg(args, char *);
-				length = _strlen(ptr);
-				write(1, ptr, length);
-				i += length;
-			}
+				count += print_string(va_arg(args, char*));
 			if (*format == 'd' || *format == 'i')
-			{
-				value = va_arg(args, int);
-				if (value < 0)
-					i++;
-				print_number(value);
-				i += _countDigits(value);
-			}
+				count += print_i_d(va_arg(args, int));
+			if (*format == 'c')
+				count += print_char(va_arg(args, int));
+			if (*format == '%')
+				count += write(1, format, 1);
 		}
 		format++;
 	}
 	va_end(args);
-	return (i);
+	return (count);
 }
-
 /**
  * _strlen - a function that calculate the length of a string.
  *

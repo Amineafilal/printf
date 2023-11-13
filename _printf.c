@@ -35,7 +35,7 @@ int _printf(const char *format, ...)
 			if (*format == '%')
 				count += write(1, format, 1);
 			if (*format == 'b')
-				count += print_b(va_arg(args, int));
+				count += print_b(va_arg(args, unsigned int));
 		}
 		format++;
 	}

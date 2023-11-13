@@ -4,7 +4,7 @@
  * @n: a character string.
  * Return: returns number of binary printed.
  */
-int print_b(int n)
+int print_b(unsigned int n)
 {
 	int i, count;
 	char binary[32];

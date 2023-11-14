@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_char - write a integer to the output
+ * print_i_d - write a integer to the output
  * @value: input value
  * Return: return value of the integer
  */

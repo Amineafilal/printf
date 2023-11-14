@@ -1,17 +1,15 @@
 #include "main.h"
 /**
- * _countDigitsunsignedint - a function that counts number..
- * @value: the integer.
- * Return: return the count.
+ * print_unsignedint - that converts an unsigned integer to a string.
+ * @ptrunint: The number to print
  */
-int _countDigitsunsignedint(unsigned int value)
+void print_unsignedint(char *ptrunint)
 {
-	int count = 0;
+	int i = 0;
 
-	while (value != 0)
+	while (ptrunint[i] != '\0')
 	{
-		value /= 10;
-		count++;
+		write(1, &ptrunint[i], 1);
+		i++;
 	}
-	return (count);
 }

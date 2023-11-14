@@ -15,6 +15,8 @@ int print_char(char c);
 int print_i_d(int value);
 int print_string(char *ptr);
 int print_b(unsigned int n);
-
+int conv_oct(int n);
+int conv_hexa(int n);
+int conv_hexa_X(int n);
 
 #endif

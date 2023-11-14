@@ -8,6 +8,8 @@ int print_i_d(int value)
 {
 	int i = 0;
 
+	if (value == NULL)
+		return (-1);
 	if (value == INT_MIN)
 	{
 		return (value);

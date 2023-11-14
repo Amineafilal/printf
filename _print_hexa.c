@@ -1,4 +1,4 @@
-#include <main.x>
+#include "main.h"
 
 /**
  * conv_hexa - a function that conver decimal to

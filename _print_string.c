@@ -13,6 +13,7 @@ int print_string(char *ptr)
 		ptr = "(null)";
 		write(1, ptr, 6);
 		count += 6;
+		return (-1);
 	}
 	else
 	{

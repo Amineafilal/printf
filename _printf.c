@@ -37,11 +37,11 @@ int _printf(const char *format, ...)
 			if (*format == 'b')
 				count += print_b(va_arg(args, unsigned int));
 			if (*format == 'o')
-				count += conv_oct(va_arg(args, int));
+				count += conv_oct(va_arg(args, unsigned int));
 			if (*format == 'x')
-				count += conv_hexa(va_arg(args, int));
+				count += conv_hexa(va_arg(args, unsigned int));
 			if (*format == 'X')
-				count += conv_hexa_X(va_arg(args, int));
+				count += conv_hexa_X(va_arg(args, unsigned int));
 		}
 		format++;
 	}

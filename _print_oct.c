@@ -8,7 +8,7 @@
  * Return: count of characters printed.
 */
 
-int conv_oct(int n)
+int conv_oct(unsigned int n)
 {
 	int i, count;
 	char binary[32];

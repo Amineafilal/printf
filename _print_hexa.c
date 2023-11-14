@@ -9,7 +9,7 @@
  * Return: count of characters printed.
 */
 
-int conv_hexa(int n)
+int conv_hexa(unsigned int n)
 {
 	int i, count, rm;
 	char binary[32];

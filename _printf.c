@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 			write(1, format, 1);
 			count++;
 		}
-		if (*format == '%' || *format != NULL)
+		if (*format == '%')
 		{
 			format++;
 			if (*format == 's')

@@ -9,7 +9,11 @@ int print_string(char *ptr)
 	int count = 0, i;
 
 	if (ptr == NULL)
+	{
 		ptr = "(null)";
+		write(1, ptr, 6);
+	}
+		
 	for (i = 0; ptr[i] != '\0'; i++)
 	{
 		write(1, &ptr[i], 1);

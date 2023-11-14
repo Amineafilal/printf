@@ -12,12 +12,15 @@ int print_string(char *ptr)
 	{
 		ptr = "(null)";
 		write(1, ptr, 6);
+		count += 6;
 	}
-		
-	for (i = 0; ptr[i] != '\0'; i++)
+	else
 	{
-		write(1, &ptr[i], 1);
-		count += 1;
+		for (i = 0; ptr[i] != '\0'; i++)
+		{
+			write(1, &ptr[i], 1);
+			count += 1;
+		}
 	}
 	return (count);
 }

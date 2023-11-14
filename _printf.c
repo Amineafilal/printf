@@ -42,6 +42,8 @@ int _printf(const char *format, ...)
 				count += conv_hexa(va_arg(args, unsigned int));
 			if (*format == 'X')
 				count += conv_hexa_X(va_arg(args, unsigned int));
+			if (*format == 'u')
+				count += print_u(va_arg(args, unsigned int));
 		}
 		format++;
 	}

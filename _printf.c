@@ -76,7 +76,7 @@ int _strlen(char *p)
  * @n: The number to print
 */
 
-void print_number(unsigned int n)
+void print_number(int n)
 {
 	int number;
 	int num = n;

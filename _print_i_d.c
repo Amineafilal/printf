@@ -7,7 +7,6 @@
 int print_i_d(int value)
 {
 	int i = 0;
-	unsigned int n;
 	char minus = '-';
 
 	n = value;
@@ -16,7 +15,7 @@ int print_i_d(int value)
 		write(1, &minus, 1);
 		i++;
 	}
-	print_number(n);
+	print_number(value);
 	i += _countDigits(value);
 	return (i);
 }

@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 	va_list args;
 
 	va_start(args, format);
-	if (format[0] == '%' && format[1] == '\0')
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	while (*format != '\0')
 	{
@@ -44,8 +44,6 @@ int _printf(const char *format, ...)
 			if (*format == 'u')
 				count += print_u(va_arg(args, unsigned int));
 		}
-		if (*format == '\0')
-			return (-1);
 		format++;
 	}
 	va_end(args);

@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 			if (*format == 's')
 				count += print_string(va_arg(args, char*));
 			if (*format == 'd' || *format == 'i')
-				count += print_i_d(va_arg(args, unsigned int));
+				count += print_i_d(va_arg(args, int));
 			if (*format == 'c')
 				count += print_char(va_arg(args, int));
 			if (*format == '%')
@@ -80,15 +80,7 @@ void print_number(unsigned int n)
 {
 	int number;
 	int num = n;
-	char signe;
 
-	if (n < 0)
-	{
-		signe = '-';
-		write(1, &signe, 1);
-
-		num = -num;
-	}
 	if (num > 9)
 	{
 		print_number(num / 10);
@@ -105,7 +97,7 @@ void print_number(unsigned int n)
  * Return: return the count.
 */
 
-int _countDigits(unsigned int value)
+int _countDigits(int value)
 {
 	int count = 0;
 

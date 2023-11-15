@@ -4,19 +4,19 @@
  * @value: input value
  * Return: return value of the integer
  */
-int print_i_d(unsigned int value)
+int print_i_d(int value)
 {
 	int i = 0;
+	unsigned int n;
+	char minus = '-';
 
-	if (value == INT_MIN)
-	{
-		return (value);
-	}
+	n = value;
 	if (value < 0)
 	{
+		write(1, &minus, 1);
 		i++;
 	}
-	print_number(value);
+	print_number(n);
 	i += _countDigits(value);
 	return (i);
 }

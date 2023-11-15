@@ -20,8 +20,7 @@ int _printf(const char *format, ...)
 	{
 		if (*format != '%')
 		{
-			write(1, format, 1);
-			count++;
+			count += write(1, format, 1);
 		}
 		if (*format == '%')
 		{
@@ -45,6 +44,8 @@ int _printf(const char *format, ...)
 			if (*format == 'u')
 				count += print_u(va_arg(args, unsigned int));
 		}
+		if (*format == '\0')
+			return (-1);
 		format++;
 	}
 	va_end(args);

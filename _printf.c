@@ -27,21 +27,21 @@ int _printf(const char *format, ...)
 			format++;
 			if (*format == 's')
 				count += print_string(va_arg(args, char*));
-			else if (*format == 'd' || *format == 'i')
+			if (*format == 'd' || *format == 'i')
 				count += print_i_d(va_arg(args, int));
-			else if (*format == 'c')
+			if (*format == 'c')
 				count += print_char(va_arg(args, int));
-			else if (*format == '%')
+			if (*format == '%')
 				count += write(1, format, 1);
-			else if (*format == 'b')
+			if (*format == 'b')
 				count += print_b(va_arg(args, unsigned int));
-			else if (*format == 'o')
+			if (*format == 'o')
 				count += conv_oct(va_arg(args, unsigned int));
-			else if (*format == 'x')
+			if (*format == 'x')
 				count += conv_hexa(va_arg(args, unsigned int));
-			else if (*format == 'X')
+			if (*format == 'X')
 				count += conv_hexa_X(va_arg(args, unsigned int));
-			else if (*format == 'u')
+			if (*format == 'u')
 				count += print_u(va_arg(args, unsigned int));
 		}
 		if (*format == '\0')

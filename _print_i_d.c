@@ -4,7 +4,7 @@
  * @value: input value
  * Return: return value of the integer
  */
-int print_i_d(int value)
+int print_i_d(unsigned int value)
 {
 	int i = 0;
 

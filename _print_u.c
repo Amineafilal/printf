@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_number - Write a function for unsigned int 
+ * print_u - Write a function for unsigned int
  * @numb: The number to print
  * Return: return the value of count
  */
@@ -15,7 +15,7 @@ int print_u(unsigned int numb)
 	ptrnumb = (char *)malloc(len + 1);
 	if (numb == 0)
 	{
-		write(1,"0",1);
+		write(1, "0", 1);
 		count++;
 	}
 	if (ptrnumb == NULL)
@@ -24,7 +24,7 @@ int print_u(unsigned int numb)
 	}
 	for (i = len - 1; i >= 0; i--)
 	{
-		ptrnumb[i] = numb % 10 +'0';
+		ptrnumb[i] = numb % 10 + '0';
 		numb /= 10;
 		count++;
 	}

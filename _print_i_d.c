@@ -7,11 +7,13 @@
 int print_i_d(int value)
 {
 	int i = 0;
-	char minus = '-';
 
+	if (value == INT_MIN)
+	{
+		return (value);
+	}
 	if (value < 0)
 	{
-		write(1, &minus, 1);
 		i++;
 	}
 	print_number(value);

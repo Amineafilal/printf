@@ -9,7 +9,6 @@ int print_i_d(int value)
 	int i = 0;
 	char minus = '-';
 
-	n = value;
 	if (value < 0)
 	{
 		write(1, &minus, 1);
